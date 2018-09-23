@@ -82,7 +82,7 @@ function closeBidding(closeBidding) {
             }
         })
   		.then(function() {
-      		return post( 'https://node-red-personal-v2.mybluemix.net/winner', listing, {permitResourcesForRelationships: true, deduplicateResources: true});
+      		return post( 'http://salesforce-iot.mybluemix.net/winner', listing, {permitResourcesForRelationships: true, deduplicateResources: true});
     	});
 }
 
@@ -111,6 +111,6 @@ function makeOffer(offer) {
         	return vehicleListingRegistry.update(listing);
     	})
   		.then(function() {
-	    	return post( 'https://node-red-personal-v2.mybluemix.net/compute', listing, {permitResourcesForRelationships: true, deduplicateResources: true});
+	    	return post( 'http://salesforce-iot.mybluemix.net/compute', listing, {permitResourcesForRelationships: true, deduplicateResources: true});
     	});
 }
